@@ -3,7 +3,7 @@ LABEL maintainer "Sebastian Daehne <daehne@rshc.de>"
 
 # update and add dependencies
 RUN apk update && apk upgrade && \
-    apk add tzdata curl wget bash ruby ruby-dev g++ musl-dev make &&
+    apk add tzdata curl wget bash ruby ruby-dev g++ musl-dev make && \
     rm -rf /var/cache/apk/*
 
 RUN echo "gem: --no-document" > /etc/gemrc 
