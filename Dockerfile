@@ -1,4 +1,6 @@
-FROM armhf/alpine:3.5
+#FROM armhf/alpine:3.5
+FROM alpine:3.5
+
 LABEL maintainer "Sebastian Daehne <daehne@rshc.de>"
 
 # update and add dependencies
@@ -9,14 +11,14 @@ RUN apk update && apk upgrade && \
 RUN echo "gem: --no-document" > /etc/gemrc 
 
 # install smashing
-RUN gem install bundler smashing io-console
+RUN gem install bundler smashing io-console json
 
 # dashboard
 RUN smashing new dashboard
 
 ENV PORT 3030
 EXPOSE ${SMASHING_PORT}
-WORKDIR /dashing
+WORKDIR /dashboard
 
 ADD run.sh /
 
