@@ -1,5 +1,4 @@
-#FROM armhf/alpine:3.5
-FROM alpine:3.5
+FROM armhf/alpine:3.5
 
 LABEL maintainer "Sebastian Daehne <daehne@rshc.de>"
 
