@@ -17,14 +17,15 @@ function install_gems() {
     for GEM in $GEMS; do
       echo -e "\ngem '$GEM'" >> Gemfile
     done
-    bundle install
   fi
+  # always do bundle install
+  bundle install
 }
 
-if [[ ! -e /installed ]]; then
+if [[ ! -e /gem/installed ]]; then
   install_widgets $WIDGETS
   install_gems $GEMS
-  touch /installed
+  touch /gem/installed
 fi
 
 if [[ ! -z "$PORT" ]]; then
