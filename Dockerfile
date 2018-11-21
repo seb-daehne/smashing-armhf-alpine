@@ -1,4 +1,6 @@
-FROM armhf/alpine:3.5
+FROM docker.io/project31/aarch64-alpine-qemu:3.5-7
+
+RUN [ "cross-build-start" ]
 
 LABEL maintainer "Sebastian Daehne <daehne@rshc.de>"
 
@@ -22,3 +24,5 @@ WORKDIR /dashboard
 ADD run.sh /
 
 CMD ["/bin/sh", "/run.sh"]
+
+RUN [ "cross-build-end" ]
