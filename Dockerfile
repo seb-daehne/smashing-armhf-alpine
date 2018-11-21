@@ -21,4 +21,4 @@ WORKDIR /dashboard
 
 ADD run.sh /
 
-CMD ["/run.sh"]
+CMD ["/bin/sh", "/run.sh"]
