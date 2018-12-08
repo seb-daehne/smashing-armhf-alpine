@@ -1,8 +1,4 @@
-require 'net/http'
-require 'json'
-require 'uri'
-require './common.rb'
-
+require_relative './common.rb'
 
 url = "#{$HOME_ASSISTANT_URL}/states/sensor.weather_temperature"
 data = get_data url
