@@ -1,7 +1,4 @@
-require 'net/https'
-require 'json'
-require 'uri'
-require './common.rb'
+require_relative './jobs/common.rb'
 
 url = "#{HOME_ASSISTANT_URL}/states/sensor.outdoor__temperature"
 data = get_data url

@@ -1,4 +1,4 @@
-require_relative './common.rb'
+require_relative './jobs/common.rb'
 
 url = "#{$HOME_ASSISTANT_URL}/states/sensor.weather_temperature"
 data = get_data url
