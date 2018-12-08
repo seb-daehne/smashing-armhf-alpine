@@ -1,10 +1,7 @@
-FROM rycus86/armhf-alpine-qemu
-ARG ARCH=armhf
-#FROM alpine:3.5
+FROM arm32v6/alpine:3.8
+LABEL maintainer "Sebastian Daehne <daehne@rshc.de>"
 
 ADD qemu-arm-static /usr/bin
-
-LABEL maintainer "Sebastian Daehne <daehne@rshc.de>"
 
 # update and add dependencies
 RUN apk update && apk upgrade && \
