@@ -1,4 +1,4 @@
-## Smashing ARMHF Alpine container
+## WallClock Smashing ARMHF Alpine container
 
 used https://github.com/rgcamus/dockerfile-alpine_smashing to create this 
 

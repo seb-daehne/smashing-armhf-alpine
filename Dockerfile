@@ -1,5 +1,7 @@
 FROM armhf/alpine:3.5
 
+ADD qemu-arm-static /usr/bin
+
 LABEL maintainer "Sebastian Daehne <daehne@rshc.de>"
 
 # update and add dependencies
@@ -14,6 +16,8 @@ RUN gem install bundler smashing io-console json
 
 # dashboard
 RUN smashing new dashboard
+ADD dashboards/clock.erb /dashboard/dashboards/clock.erb
+ADD jobs/* /dashboard/jobs/
 
 ENV PORT 3030
 EXPOSE ${SMASHING_PORT}
