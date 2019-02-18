@@ -27,8 +27,6 @@ RUN gem install bundler smashing io-console json thin etc
 
 # dashboard
 RUN smashing new dashboard
-ADD dashboards/clock.erb /dashboard/dashboards/clock.erb
-ADD jobs/* /dashboard/jobs/
 
 WORKDIR /dashboard
 RUN bundle install
